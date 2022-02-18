@@ -1,0 +1,96 @@
+@media screen and (max-width: 1350px){
+    *{
+        font-size: 14px;
+    }
+    body{
+        height: 100%;
+        padding: 20px 0px;
+    }
+    .main{
+        width: 100%;
+        border-radius: 0px;
+        padding: 25px 15px;
+        width: 500px;
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    *{
+        font-size: 14px;
+    }
+    body{
+        height: 100%;
+        padding: 20px 0px;
+    }
+    .main{
+        width: 100%;
+        border-radius: 0px;
+        padding: 25px 15px;
+        width: 500px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    *{
+        font-size: 14px;
+    }
+    body{
+        height: 100%;
+        display: block;
+        padding: 0px;
+    }
+    .main{
+        width: 100%;
+        border-radius: 0px;
+        padding: 25px 15px;
+    }
+    form{
+        width: 98%;
+        height: 40px;
+        border-radius: 5px;
+    }
+    form input{
+        padding: 0px 10px;
+    }
+    .box{
+        width: 49%;
+        margin: 5px;
+    }
+    .rows{
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 360px){
+    *{
+        font-size: 14px;
+    }
+    body{
+        height: 100%;
+        display: block;
+        padding: 0px;
+    }
+    .main{
+        width: 100%;
+        border-radius: 0px;
+        padding: 25px 15px;
+    }
+    form{
+        width: 98%;
+        height: 40px;
+        border-radius: 5px;
+    }
+    form input{
+        padding: 0px 10px;
+    }
+    .box{
+        width: 100%;
+        margin: 5px 0px;
+    }
+    .rows{
+        display: block;
+    }
+}

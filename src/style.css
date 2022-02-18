@@ -1,0 +1,115 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: rgb(79, 84, 99);
+}
+body{
+    float: left;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(235, 235, 235) !important;
+}
+.main{
+    float: left;
+    width: 500px;
+    height: 100%;
+    border-radius: 5px;
+    padding: 30px 20px;
+    background: rgb(79, 84, 99);
+}
+.rows{
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+.country{
+    float: left;
+    width: 100%;
+    padding: 20px;
+    margin: 0px;
+}
+.country h3{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+.country p{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+form{
+    width: 95%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+form input{
+    width: 75%;
+    float: left;
+    padding: 0px 20px;
+    border: none;
+    outline: none;
+    background: white;
+}
+form button{
+    width: 25%;
+    float: left;
+    border: none;
+    background: rgb(72, 0, 255);
+    color: white;
+}
+.box{
+    text-align: center;
+    float: left;
+    width: 49%;
+    padding: 25px 5px;
+    background: white;
+    border-radius: 5px;
+    margin: 5px;
+}
+.box h5{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.box h3{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.rows a{
+    color: rgb(0, 255, 170);
+    padding: 0px;
+    margin: 10px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    float: left;
+    text-decoration: none;
+}
