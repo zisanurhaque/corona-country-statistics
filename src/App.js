@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 const App = () => {
 
@@ -7,6 +8,7 @@ const App = () => {
   const [global, setGlobal] = useState({})
   const [country, setCountry] = useState({})
   const [input, setInput] = useState('')
+  const [suggest, setSuggest] = useState([])
 
   const handleInput = (e) => {
     e.preventDefault()
@@ -16,9 +18,28 @@ const App = () => {
     })
     if(update){
       setCountry(update)
+      setInput('')
     }else{
       setCountry({})
     }
+  }
+
+  const handleSuggest = (e) => {
+    e.preventDefault();
+
+    if(input === ''){
+      setSuggest([])
+    }else{
+      let update = []
+      update = countries.filter((item) => {
+        return item.Country.toLowerCase().search(input.toLowerCase()) !== -1
+      })
+      setSuggest(update)
+    }
+  }
+
+  const handleUpdate = (country) => {
+    setInput(country)
   }
 
   useEffect(() => {
@@ -28,19 +49,30 @@ const App = () => {
 
   }, [])
 
+  const comp = <Scrollbars style={{height: 100}}>
+    {
+      suggest.map((item, index) => (
+        <button onClick={() => handleUpdate(item.Country)} key={index}>{item.Country}</button>
+      ))
+    }
+  </Scrollbars>
+
   return (
     <div className="main">
 
       <div className="rows">
         <form onSubmit={handleInput}>
-          <input type="search" placeholder="Type full country name" onChange={(e) => setInput(e.target.value)}/>
+          <input type="search" placeholder="Type full country name" value={input} onChange={(e) => setInput(e.target.value)} onKeyUp={(e) => handleSuggest(e)}/>
           <button>Search</button>
         </form>
+        <div className="suggestions">
+          {input === '' ? null : comp}
+        </div>
       </div>
 
       <div className="country">
-        <h3>{Object.keys(country).length === 0 ? "Global" : country.Country}</h3>
-        <p>{Object.keys(country).length === 0 ? global?.Date : country.Date}</p>
+        <h3>{Object.keys(country).length === 0 ? "Global" : country?.Country}</h3>
+        <p>{Object.keys(country).length === 0 ? global?.Date : country?.Date}</p>
       </div>
 
       <div className="rows">

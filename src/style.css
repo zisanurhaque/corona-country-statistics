@@ -22,6 +22,8 @@ body{
     border-radius: 5px;
     padding: 30px 20px;
     background: rgb(79, 84, 99);
+    position: relative;
+    overflow: hidden;
 }
 .rows{
     float: left;
@@ -30,6 +32,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 0px;
+    position: relative;
 }
 .country{
     float: left;
@@ -71,12 +74,39 @@ form input{
     outline: none;
     background: white;
 }
+
 form button{
     width: 25%;
     float: left;
     border: none;
     background: rgb(72, 0, 255);
     color: white;
+}
+
+.suggestions{
+    float: left;
+    color: grey;
+    height: max-content;
+    background: rgb(255, 255, 255);
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    left: 31px;
+    z-index: 1;
+    box-shadow: 0px 0px 2px 0px grey;
+}
+.suggestions button{
+    float: left;
+    padding: 5px 10px;
+    margin: 0px;
+    border: none;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    font-size: 14px;
+    background: none;
+    text-align: left;
+    width: 100%;
 }
 .box{
     text-align: center;
