@@ -44,8 +44,8 @@ const App = () => {
 
   useEffect(() => {
 
-    axios.get(process.env.API).then(response => setGlobal(response.data.Global))
-    axios.get(process.env.API).then(response => setCountries(response.data.Countries))
+    axios.get("https://api.covid19api.com/summary").then(response => setGlobal(response.data.Global))
+    axios.get("https://api.covid19api.com/summary").then(response => setCountries(response.data.Countries))
 
   }, [])
 
