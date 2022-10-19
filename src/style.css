@@ -6,6 +6,7 @@
     font-weight: 400;
     color: rgb(79, 84, 99);
 }
+
 body{
     float: left;
     width: 100%;
@@ -13,17 +14,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(235, 235, 235) !important;
+    background: rgb(31, 122, 134) !important;
 }
 .main{
     float: left;
-    width: 500px;
+    width: 550px;
     height: 100%;
-    border-radius: 5px;
-    padding: 30px 20px;
-    background: rgb(79, 84, 99);
+    border-radius: 10px;
+    padding: 50px 30px;
+    background: linear-gradient(215deg, rgb(8, 16, 44), rgb(29, 108, 121));
     position: relative;
     overflow: hidden;
+    box-shadow: 0px 0px 8px 0px rgb(17, 67, 75);
 }
 .rows{
     float: left;
@@ -62,9 +64,10 @@ form{
     float: left;
     display: flex;
     justify-content: center;
-    height: 45px;
+    height: 55px;
     overflow: hidden;
     border-radius: 50px;
+    border: 2px solid white;
 }
 form input{
     width: 75%;
@@ -72,15 +75,16 @@ form input{
     padding: 0px 20px;
     border: none;
     outline: none;
-    background: white;
+    background: none;
+    color: white;
 }
 
 form button{
     width: 25%;
     float: left;
     border: none;
-    background: rgb(72, 0, 255);
-    color: white;
+    background: white;
+    color: rgb(8, 16, 44);
 }
 
 .suggestions{
@@ -88,26 +92,39 @@ form button{
     color: grey;
     height: max-content;
     background: rgb(255, 255, 255);
-    width: 67%;
-    display: flex;
+    width: 66%;
     flex-direction: column;
     position: absolute;
-    top: 45px;
-    left: 31px;
+    top: 60px;
+    left: 35px;
     z-index: 1;
-    box-shadow: 0px 0px 2px 0px grey;
+    box-shadow: 0px 0px 2px 0px rgb(102, 102, 102);
+    border-radius: 5px;
+    overflow-y: scroll;
+    max-height: 300px;
 }
+  
+
 .suggestions button{
     float: left;
-    padding: 5px 10px;
+    padding: 15px 20px;
     margin: 0px;
     border: none;
-    border-bottom: 1px solid rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(216, 216, 216);
     font-size: 14px;
     background: none;
     text-align: left;
     width: 100%;
+    font-weight: 600;
+    color: rgb(8, 16, 44);
+    transition: .3s;
 }
+
+.suggestions button:hover{
+    background: linear-gradient(215deg, rgb(8, 16, 44), rgb(29, 108, 121));
+    color: white;
+}
+
 .box{
     text-align: center;
     float: left;
@@ -115,7 +132,7 @@ form button{
     padding: 25px 5px;
     background: white;
     border-radius: 5px;
-    margin: 5px;
+    margin: 8px;
 }
 .box h5{
     padding: 0px;
@@ -126,20 +143,29 @@ form button{
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
+    margin-bottom: 5px;
+    color: rgb(8, 16, 44);
 }
 .box h3{
     padding: 0px;
     margin: 0px;
     float: left;
     width: 100%;
+    color: rgb(29, 108, 121);
+    font-weight: 600;
     text-align: center;
 }
 .rows a{
-    color: rgb(0, 255, 170);
+    color: white;
     padding: 0px;
     margin: 10px;
     margin-top: 15px;
     margin-bottom: 0px;
     float: left;
     text-decoration: none;
+    transition: .3s;
+}
+
+.rows a:hover{
+    color: rgb(204, 204, 204);
 }

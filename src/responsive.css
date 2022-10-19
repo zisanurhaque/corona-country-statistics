@@ -2,54 +2,37 @@
     *{
         font-size: 14px;
     }
-    body{
-        height: 100%;
-        padding: 20px 0px;
-    }
     .main{
-        width: 100%;
-        border-radius: 0px;
-        padding: 25px 15px;
-        width: 500px;
+        width: 550px;
     }
 }
 
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 700px){
     *{
         font-size: 14px;
     }
-    body{
-        height: 100%;
-        padding: 20px 0px;
-    }
-    .main{
-        width: 100%;
-        border-radius: 0px;
-        padding: 25px 15px;
-        width: 500px;
-    }
-}
 
-
-@media screen and (max-width: 500px){
-    *{
-        font-size: 14px;
-    }
     body{
-        height: 100%;
-        display: block;
         padding: 0px;
+        width: 100%;
     }
     .main{
-        width: 100%;
+        width: 100vw;
         border-radius: 0px;
-        padding: 25px 15px;
+        padding: 50px;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
     form{
-        width: 98%;
-        height: 40px;
+        width: 82%;
+        height: 60px;
         border-radius: 5px;
+        position: fixed;
+        top: 50px;
     }
     form input{
         padding: 0px 10px;
@@ -64,7 +47,7 @@
 }
 
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 480px){
     *{
         font-size: 14px;
     }
@@ -76,21 +59,46 @@
     .main{
         width: 100%;
         border-radius: 0px;
-        padding: 25px 15px;
+        padding: 25px 20px;
+        height: 100%;
     }
     form{
         width: 98%;
-        height: 40px;
-        border-radius: 5px;
+        height: 50px;
+        position: relative;
+        top: 0px;
     }
     form input{
-        padding: 0px 10px;
+        padding: 10px;
     }
     .box{
         width: 100%;
-        margin: 5px 0px;
+        margin: 10px 0px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
+
+    .box h5{
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .box h3{
+        font-size: 34px;
+        margin-top: 5px;
+    }
+
     .rows{
         display: block;
+        padding: 0px;
     }
+
+    .rows a{
+        text-align: center;
+        padding: 0px;
+        width: 50%;
+        margin: 0px;
+        margin-top: 20px;
+    }
+
 }
